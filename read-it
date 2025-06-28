@@ -1,0 +1,46 @@
+############### most importantly execute (chmod +x your user data script) your script before applying anything else health check fails for EC2 .
+
+There are two folder
+
+one for consumer thats has vpc end point
+
+another vpc end point services (aws private link)
+
+a. first tf apply vpc end point services (provider) then gives a output : service name
+
+b.that service name is needed by vpc end point (consumer)
+
+terraform apply -auto-approve -var="endpoint_service_name=$(cd ../provider-EPS && terraform output -raw endpoint_service_name)"
+
+here what you are doing is fectching that service name output and giving it as a variable to consumer
+
+done Tf built
+
+c.on consumer and provider first ssh into your pub ec2 and then private ec2
+
+on consuer private ec2
+
+up on doing
+
+curl http://"vpce-0ceb7936c6c5cfb21-ylwjnuzv.vpce-svc-0a32e9af2aa94827b.eu-central-1.vpce.amazonaws.com" .........(dns of vpc end point )
+
+you must get html content from private ec2 provider
+
+basically whats happening inorder to access as above and to est a communication between two private ec2 across diff vpc's
+
+consumer need end point (taking service) ,provider need end point services (offering its service).
+
+how to dstroy it
+
+a. first destroy vpc end point services (provider) folder >>>>>>>>>>>>>vpc end point services wont be destroyed shows an eroor beacause another folder is using it ......leave it there
+
+b.come to end point (consumer) folder apply tf destroy >>>>>>>>it destroys and detaches from end point services (above)
+
+c.then again go to point a. apply tf destroy
+
+done
+
+
+
+######above cmds for manual if want to fully automate i have made script too
+and the architecture diagram with SS results 
