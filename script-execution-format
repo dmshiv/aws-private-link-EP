@@ -1,0 +1,40 @@
+
+on terminal out put would look like 
+
+What do you want to do?
+1) Terraform Apply
+2) Terraform Destroy
+Enter choice (1 or 2): 1
+
+=========== Step 1: Init & Apply provider-EPS ===========
+👉 Initializing Terraform in >>>>>>>> /home/user/aws-private-link-EP/provider-EPS
+💡 Planning Terraform for >>>>>>>> /home/user/aws-private-link-EP/provider-EPS
+✅ Plan successful — applying...
+
+🔧 Step 2: Capturing output from provider-EPS...
+✅ Captured endpoint_service_name: com.amazonaws.vpce.eu-central-1.vpce-svc-0123456789abcdef
+
+🔧 Step 3: Init & Apply consumer-EP
+👉 Initializing Terraform in >>>>>>>> /home/user/aws-private-link-EP/consumer-EP
+💡 Planning Terraform for >>>>>>>> /home/user/aws-private-link-EP/consumer-EP
+✅ Plan successful — applying...
+
+🎉 Apply process complete for both modules!
+
+What do you want to do?
+1) Terraform Apply
+2) Terraform Destroy
+Enter choice (1 or 2): 2
+
+=========== DESTROYING RESOURCES ===========
+🔥 Destroying Terraform resources in >>>>>>>> /home/user/aws-private-link-EP/provider-EPS
+✅ Destroyed: /home/user/aws-private-link-EP/provider-EPS
+
+🔥 Destroying Terraform resources in >>>>>>>> /home/user/aws-private-link-EP/consumer-EP
+✅ Destroyed: /home/user/aws-private-link-EP/consumer-EP
+
+🔥 Destroying Terraform resources in >>>>>>>> /home/user/aws-private-link-EP/provider-EPS
+✅ Destroyed: /home/user/aws-private-link-EP/provider-EPS
+
+🧨 All Terraform resources destroyed!
+
