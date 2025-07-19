@@ -1,0 +1,30 @@
+data.aws_ami.amazon_linux_2023: Reading...
+aws_vpc.main: Refreshing state... [id=vpc-0ae0b69e9aba6d181]
+data.aws_ami.amazon_linux_2023: Read complete after 2s [id=ami-01fef3b730849ff89]
+aws_subnet.public[0]: Refreshing state... [id=subnet-09e213ea04a4acbe8]
+aws_security_group.bastion: Refreshing state... [id=sg-0de55df379f95ea53]
+aws_lb_target_group.web: Refreshing state... [id=arn:aws:elasticloadbalancing:eu-central-1:465242563055:targetgroup/web-target/be0f59d614b7efbd]
+aws_subnet.private[0]: Refreshing state... [id=subnet-03602c35d7ebf0e7e]
+aws_internet_gateway.gw: Refreshing state... [id=igw-0b2b81d67930e6c33]
+aws_subnet.private[1]: Refreshing state... [id=subnet-02f343f00dd8eb9b1]
+aws_subnet.public[1]: Refreshing state... [id=subnet-019ac38a5a180d7bf]
+aws_security_group.private: Refreshing state... [id=sg-0c2c6619463c79d2f]
+aws_route_table.public: Refreshing state... [id=rtb-065ccc0acc7dc65d6]
+aws_eip.nat: Refreshing state... [id=eipalloc-0344af64ff9f03b92]
+aws_instance.bastion: Refreshing state... [id=i-032013359196a9acd]
+aws_lb.nlb: Refreshing state... [id=arn:aws:elasticloadbalancing:eu-central-1:465242563055:loadbalancer/net/provider-nlb/c3c7a2dc2c286fd9]
+aws_instance.private_ec2: Refreshing state... [id=i-09849b7ddbfb1638d]
+aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0d12ba605a2fe2e93]
+aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-074ef319cb159fe91]
+aws_nat_gateway.nat: Refreshing state... [id=nat-0096841983adad864]
+aws_route_table.private: Refreshing state... [id=rtb-030fc431fd7878a5e]
+aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-03531ebe3569697b0]
+aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-01c1a5b98000514dd]
+aws_lb_listener.web: Refreshing state... [id=arn:aws:elasticloadbalancing:eu-central-1:465242563055:listener/net/provider-nlb/c3c7a2dc2c286fd9/7faec7a2d03ce13b]
+aws_vpc_endpoint_service.this: Refreshing state... [id=vpce-svc-07670d6c97f560f14]
+aws_lb_target_group_attachment.web: Refreshing state... [id=arn:aws:elasticloadbalancing:eu-central-1:465242563055:targetgroup/web-target/be0f59d614b7efbd-20250719183707807500000005]
+
+No changes. Your infrastructure matches the configuration.
+
+Terraform has compared your real infrastructure against your configuration
+and found no differences, so no changes are needed.

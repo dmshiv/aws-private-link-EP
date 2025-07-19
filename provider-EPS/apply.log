@@ -1,0 +1,6 @@
+
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+endpoint_service_name = "com.amazonaws.vpce.eu-central-1.vpce-svc-07670d6c97f560f14"
